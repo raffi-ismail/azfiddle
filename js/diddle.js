@@ -123,11 +123,11 @@ Diddler.prototype.refresh_output = function (manually_triggered) {
     var _this = this;
     var params = { id: diddle_id };
 
-    if (manually_triggered) {
-        params.content_text = window.btoa(content);
-    } else {
-        params.deltas = this.deltas;
-    }
+    //if (manually_triggered) {
+    params.content_text = window.btoa(content);
+    //} else {
+    //    params.deltas = this.deltas;
+    //}
 
     this.json_post.send(params, function(success) {
         _this.deltas = [];
